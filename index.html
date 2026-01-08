@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="generator">
+        <!-- Password output -->
+        <div class="password">
+            <input
+                type="text"
+                id="passwordOutput"
+                readonly
+                placeholder="Generated password"
+            />
+            <button id="copyBtn">copy</button>
+        </div>
+
+        <p id="Keamananpassword">Strength: -</p>
+
+
+        <!-- Password length -->
+        <div class="range">
+            <label for="lengthRange">Length:</label>
+            <input
+                type="range"
+                id="lengthRange"
+                min="4"
+                max="24"
+                value="8"
+            />
+            <span id="lengthValue">8</span>
+        </div>
+
+        <!-- Options -->
+        <div class="options">
+            <label class="option">
+                <input type="checkbox" id="lowercaseCb" checked />
+                <span>a–z</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="uppercaseCb" />
+                <span>A–Z</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="digitsCb" />
+                <span>0–9</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="specialsCb" />
+                <span>!@#$%^</span>
+            </label>
+        </div>
+
+        <!-- Generate button -->
+        <button class="generate">Generate</button>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
